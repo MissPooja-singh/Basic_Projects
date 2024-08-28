@@ -1,0 +1,1560 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class  Online_Grocery_Shop
+{
+
+    static
+    {
+        System.out.println("**********************************************");
+        System.out.println("*                                            *");
+        System.out.println("*            Welcome to My Shop              *");
+        System.out.println("*                                            *");
+        System.out.println("**********************************************");
+    }
+    public static void main(String[] args)
+    {
+        login b=new login();
+        b.login();
+        Shop m=new Shop();
+        m.product();
+    }
+}
+class Shop {
+    public void product() {
+        System.out.println("Press 1 for vegetable");
+        System.out.println("Press 2 for Dairy_Product");
+        System.out.println("Press 3 for Personal_care_product");
+        System.out.println("Press 4 for Spices_name");
+        System.out.println("Press 5 for Drinks");
+        System.out.println("Press 6 for Cleaning supplies");
+        System.out.println("Press 7 for miscellaneous");
+        System.out.println("Press 8 for pulses");
+        Shop s=new Vegetable();
+        Vegetable v=(Vegetable)s;
+        Shop s1=new Dairy_product();
+        Dairy_product d=(Dairy_product) s1;
+        Shop s2=new Personal_care_product();
+        Personal_care_product c=(Personal_care_product)s2;
+        Shop s3=new Spices_name();
+        Spices_name n19=(Spices_name)s3;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter any number");
+        int n = sc.nextInt();
+        System.out.println(n);
+        switch(n) {
+            case 1:
+                System.out.println("you have selected vegetables");
+                v.product1();
+                break;
+            case 2:
+                System.out.println("you have selected  Dairy_Product");
+                d.Dairy();
+                break;
+            case 3:
+                System.out.println("you have selected Personal_care_product");
+               c.care();
+                break;
+            case 4:
+                System.out.println("you have selected Spices_name");
+                n19.spice();
+                break;
+            case 5:
+                System.out.println("you have selected Cleaning supplies");
+                v.product1();
+                break;
+            case 6:
+                System.out.println("you have selected miscellaneous");
+                v.product1();
+                break;
+            case 7:
+                System.out.println("you have selected pulses");
+                v.product1();
+                break;
+            default:
+                System.out.println("you have selected invalid input");
+                product();
+                break;
+
+        }
+    }
+}
+class Vegetable extends Shop {
+    int weight;
+    double price;
+    String brand;
+
+    public void product1() {
+        System.out.println("Press 1 for tomato");
+        System.out.println("Press 2 for potato");
+        System.out.println("Press 3 for cabbage");
+        System.out.println("Press 4 for brinjal");
+        System.out.println("Press 5 for cauliflower");
+        System.out.println("Press 6 for cucumber");
+        System.out.println("Press 7 for carrot");
+        System.out.println("Press 8 for peas");
+        System.out.println("Press 9 for radish");
+        System.out.println("Press 10 for lady finger");
+        System.out.println("Press 11 for bottle gourd");
+        System.out.println("Press 12 for bitter gourd");
+        System.out.println("Press 13 for capsicum");
+        System.out.println("Press 14 for spinach");
+        System.out.println("Press 15 for beetroot");
+        System.out.println("Press 16 for broccoli");
+        System.out.println("Press 17 for green bean");
+        System.out.println("Press 18 for corn");
+        System.out.println("Press 19 for pumpkin");
+        System.out.println("Press 20 for mushroom");
+        System.out.println("Press 21 for ginger");
+        System.out.println("Press 22 for chilli");
+        System.out.println("Press 23 for garlic");
+        System.out.println("Press 24 for coriander");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter any number");
+        int n = sc.nextInt();
+        System.out.println(n);
+        switch (n) {
+            case 1:
+                System.out.println("you have selected tomato");
+                Tomato T1 = new Tomato(5, 25.5);
+                break;
+            case 2:
+                System.out.println("you have selected Potato");
+                Potato T2 = new Potato(5, 25.5);
+                break;
+            case 3:
+                System.out.println("you have selected Cabbage");
+                Cabbage T3 = new Cabbage(5, 25.5);
+                break;
+            case 4:
+                System.out.println("you have selected  Brinjal");
+                Brinjal T4 = new Brinjal(5, 25.5);
+                break;
+            case 5:
+                System.out.println("you have selected Cauliflower");
+                Cauliflower T5 = new Cauliflower(5, 25.5);
+                break;
+            case 6:
+                System.out.println("you have selected Cucumber");
+                Cucumber T6 = new Cucumber(5, 25.5);
+                break;
+            case 7:
+                System.out.println("you have selected Carrot");
+                Carrot T7 = new Carrot(5, 25.5);
+                break;
+            case 8:
+                System.out.println("you have selected Peas");
+                Peas T8 = new Peas(5, 25.5);
+                break;
+            case 9:
+                System.out.println("you have selected Radish");
+                Radish T9 = new Radish(5, 25.5);
+                break;
+            case 10:
+                System.out.println("you have selected Lady_finger");
+                Lady_finger T10 = new Lady_finger(5, 25.5);
+                break;
+            case 11:
+                System.out.println("you have selected Bottle_gourd");
+                Bottle_gourd T11 = new Bottle_gourd(5, 25.5);
+                break;
+            case 12:
+                System.out.println("you have selected Bitter_gourd");
+                Bitter_gourd T12 = new Bitter_gourd(5, 25.5);
+                break;
+            case 13:
+                System.out.println("you have selected Capsicum");
+                Capsicum T13 = new Capsicum(5, 25.5);
+                break;
+            case 14:
+                System.out.println("you have selected Spinach");
+                Spinach T14 = new Spinach(5, 25.5);
+                break;
+            case 15:
+                System.out.println("you have selected Beetroot");
+                Beetroot T15 = new Beetroot(5, 25.5);
+                break;
+            case 16:
+                System.out.println("you have selected Brocccoli");
+                Brocccoli T16 = new Brocccoli(5, 25.5);
+                break;
+            case 17:
+                System.out.println("you have selected Green_bean");
+                Green_bean T17 = new Green_bean(5, 25.5);
+                break;
+            case 18:
+                System.out.println("you have selected Corn");
+                Corn T18 = new Corn(5, 25.5);
+                break;
+            case 19:
+                System.out.println("you have selected Pumpkin");
+                Pumpkin T19 = new Pumpkin(5, 25.5);
+                break;
+            case 20:
+                System.out.println("you have selected Mushroom");
+                Mushroom T20 = new Mushroom(5, 25.5);
+                break;
+            case 21:
+                System.out.println("you have selected Ginger");
+                Ginger T21 = new Ginger(5, 25.5);
+                break;
+            case 22:
+                System.out.println("you have selected Chilli");
+                Chilli T22 = new Chilli(5, 25.5);
+                break;
+            case 23:
+                System.out.println("you have selected Garlic");
+                Garlic T23 = new Garlic(5, 25.5);
+            case 24:
+                System.out.println("you have selected Coriander");
+                Coriander T24 = new Coriander(5, 25.5);
+            default:
+                System.out.println("you have selected invalid input");
+                product1();
+        }
+        }
+
+    public void P()
+    {
+
+        System.out.println("Weight :" +weight);
+        System.out.println("Price :" + price);
+        buy b=new buy();
+        b.buy();
+    }
+}
+
+
+    class Tomato extends Vegetable {
+        public Tomato(int weight,double price) {
+            this.weight = weight;
+            this.price = price;
+            P();
+        }
+
+    }
+class Potato extends Vegetable
+{
+    public Potato(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Cabbage extends Vegetable
+{
+    public Cabbage(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Brinjal extends Vegetable
+{
+    public  Brinjal(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Cauliflower extends Vegetable
+{
+    public Cauliflower(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Cucumber extends Vegetable
+{
+    public Cucumber(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class  Carrot extends Vegetable
+{
+    public Carrot(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Peas extends Vegetable
+{
+    public Peas(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Radish extends Vegetable
+{
+    public  Radish(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Lady_finger extends Vegetable
+{
+    public Lady_finger(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Bottle_gourd extends Vegetable
+{
+    public Bottle_gourd(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Bitter_gourd extends Vegetable
+{
+    public Bitter_gourd(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Capsicum extends Vegetable
+{
+    public Capsicum(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Spinach extends Vegetable
+{
+    public Spinach(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Beetroot extends Vegetable
+{
+    public Beetroot(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Brocccoli extends Vegetable
+{
+    public Brocccoli(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Green_bean extends Vegetable
+{
+    public  Green_bean(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Corn extends Vegetable
+{
+    public Corn(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Pumpkin extends Vegetable
+{
+    public Pumpkin(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Mushroom extends Vegetable
+{
+    public Mushroom(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Ginger extends Vegetable
+{
+    public Ginger(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Chilli extends Vegetable
+{
+    public Chilli(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Garlic extends Vegetable
+{
+    public Garlic(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Coriander extends Vegetable
+{
+    public Coriander(int weight,double price) {
+        this.weight = weight;
+        this.price = price;
+        P();
+    }
+}
+class Dairy_product extends Shop
+{
+    int  price;
+    String brand;
+    String weight;
+    public void Dairy() {
+        System.out.println("Press 1 for Milk ");
+        System.out.println("Press 2 for Butter");
+        System.out.println("Press 3 for Ice_cream");
+        System.out.println("Press 4 for Curd");
+        System.out.println("Press 5 for Lassi");
+        System.out.println("Press 6 for Paneer");
+        System.out.println("Press 7 for Buttermilk");
+        System.out.println("Press 8 for Ghee");
+        System.out.println("Press 9 for Milk_powder");
+        System.out.println("Press 10 for Cheese");
+        System.out.println("Press 11 for Cream_cheese");
+        System.out.println("Press 12 for Yoghurt ");
+        System.out.println("Press 13 for Fresh_cream");
+        System.out.println("Press 14 for  Goat_milk");
+        System.out.println("Press 15 for Cold_coffee");
+        System.out.println("Press 16 for  Coffee");
+        System.out.println("Press 17 for  Tea");
+        System.out.println("Press 18 for  Condesed_milk");
+        System.out.println("Press 19 for Custard_milk");
+        System.out.println("Press 20 for  Cream");
+        System.out.println("Press 21 for Whipped_cream");
+        System.out.println("Press 22 for Sour_cream");
+        System.out.println("Press 23 for Kulfi");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter any number");
+        int n = sc.nextInt();
+        System.out.println(n);
+        switch (n) {
+            case 1:
+                System.out.println("you have selected Milk");
+                Milk d1 = new  Milk(25, "Amul","1litre");
+                break;
+            case 2:
+                System.out.println("you have selected  Butter");
+                Butter d2 = new  Butter(25, "Amul","1litre");
+                break;
+            case 3:
+                System.out.println("you have selected Ice_cream");
+                Ice_cream d3 = new Ice_cream(25, "Amul","1litre");
+                break;
+            case 4:
+                System.out.println("you have selected  Curd");
+                Curd d4 = new Curd(25, "Amul","1litre");
+                break;
+            case 5:
+                System.out.println("you have selected  Lassi");
+                Lassi d5 = new  Lassi(25, "Amul","1litre");
+                break;
+            case 6:
+                System.out.println("you have selected Paneer");
+                Paneer d6 = new Paneer(25, "Amul","1litre");
+                break;
+            case 7:
+                System.out.println("you have selected Buttermilk");
+                Buttermilk d7 = new Buttermilk(25, "Amul","1litre");
+                break;
+            case 8:
+                System.out.println("you have selected Ghee");
+                Ghee d8 = new Ghee(25, "Amul","1litre");
+                break;
+            case 9:
+                System.out.println("you have selected Milk_powder");
+                Milk_powder d9 = new Milk_powder(25, "Amul","1litre");
+                break;
+            case 10:
+                System.out.println("you have selected Cheese");
+                Cheese d10 = new Cheese(25, "Amul","1litre");
+                break;
+            case 11:
+                System.out.println("you have selected Cream_cheese");
+                Cream_cheese d11 = new Cream_cheese(25, "Amul","1litre");
+                break;
+            case 12:
+                System.out.println("you have selected Yoghurt");
+                Yoghurt d12 = new Yoghurt(25, "Amul","1litre");
+                break;
+            case 13:
+                System.out.println("you have selected Fresh_cream");
+                Fresh_cream d13 = new Fresh_cream(25, "Amul","1litre");
+                break;
+            case 14:
+                System.out.println("you have selected Goat_milk");
+                Goat_milk d14 = new Goat_milk(25, "Amul","1litre");
+                break;
+            case 15:
+                System.out.println("you have selected Cold_coffee");
+                Cold_coffee d15 = new Cold_coffee(25, "Amul","1litre");
+                break;
+            case 16:
+                System.out.println("you have selected Coffee");
+                Coffee d16 = new Coffee(25, "Amul","1litre");
+                break;
+            case 17:
+                System.out.println("you have selected Tea");
+                Tea d17 = new Tea(25, "Amul","1litre");
+                break;
+            case 18:
+                System.out.println("you have selected Condesed_milk");
+                Condesed_milk d18 = new Condesed_milk(25, "Amul","1litre");
+                break;
+            case 19:
+                System.out.println("you have selected Custard_milk");
+                Custard_milk d19 = new Custard_milk(25, "Amul","1litre");
+                break;
+            case 20:
+                System.out.println("you have selected Cream");
+                Cream d20 = new Cream(25, "Amul","1litre");
+                break;
+            case 21:
+                System.out.println("you have selected Whipped_cream");
+                Whipped_cream d21 = new Whipped_cream(25, "Amul","1litre");
+                break;
+            case 22:
+                System.out.println("you have selected Sour_cream");
+                Sour_cream d22 = new Sour_cream(25, "Amul","1litre");
+                break;
+            case 23:
+                System.out.println("you have selected Kulfi");
+                Kulfi d23 = new Kulfi(25, "Amul","1litre");
+                break;
+            default:
+                System.out.println("you have selected invalid input");
+               Dairy();
+        }
+
+    }
+    public void P1()
+    {
+        System.out.println("Price :" + price);
+        System.out.println("Brand :" +brand);
+        System.out.println("Weight :" +weight);
+        buy b=new buy();
+        b.buy();
+    }
+}
+class Milk extends Dairy_product
+{
+    Milk(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Butter extends Dairy_product
+{
+    Butter(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Ice_cream extends Dairy_product
+{
+    Ice_cream(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Curd extends Dairy_product
+{
+    Curd (int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Lassi extends Dairy_product
+{
+    Lassi(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Paneer extends Dairy_product
+{
+    Paneer(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Buttermilk extends Dairy_product
+{
+    Buttermilk(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Ghee extends Dairy_product
+{
+    Ghee(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Milk_powder extends Dairy_product
+{
+    Milk_powder(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Cheese extends Dairy_product
+{
+    Cheese(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Cream_cheese extends Dairy_product
+{
+    Cream_cheese(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Yoghurt extends Dairy_product
+{
+    Yoghurt(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Fresh_cream extends Dairy_product
+{
+    Fresh_cream(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Goat_milk extends Dairy_product
+{
+    Goat_milk(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Cold_coffee extends Dairy_product
+{
+    Cold_coffee(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Coffee extends Dairy_product
+{
+    Coffee(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Tea extends Dairy_product
+{
+    Tea(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Condesed_milk extends Dairy_product
+{
+    Condesed_milk(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Custard_milk extends Dairy_product
+{
+    Custard_milk(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Cream extends Dairy_product
+{
+    Cream(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Whipped_cream extends Dairy_product
+{
+    Whipped_cream(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Sour_cream extends Dairy_product
+{
+    Sour_cream(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Kulfi extends Dairy_product
+{
+    Kulfi(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P1();
+    }
+}
+class Personal_care_product extends Shop
+{
+    int price;
+    String brand;
+    public void care() {
+        System.out.println("Press 1 for Perfume ");
+        System.out.println("Press 2 for Hand_lotion ");
+        System.out.println("Press 3 for Razor");
+        System.out.println("Press 4 for Tissues");
+        System.out.println("Press 5 for Sunglasses");
+        System.out.println("Press 6 for Hand_mirror");
+        System.out.println("Press 7 for Wet_wipe");
+        System.out.println("Press 8 for Toothbrush");
+        System.out.println("Press 9 for Sunscreen");
+        System.out.println("Press 10 for Cotton_swabs");
+        System.out.println("Press 11 for Scissors");
+        System.out.println("Press 12 for Mouth_wash ");
+        System.out.println("Press 13 for Comb");
+        System.out.println("Press 14 for Hair_spray");
+        System.out.println("Press 15 for Hair_clip");
+        System.out.println("Press 16 for  Hairband");
+        System.out.println("Press 17 for  Hairbrush");
+        System.out.println("Press 18 for  Bobbypin");
+        System.out.println("Press 19 for Hairgel");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter any number");
+        int n = sc.nextInt();
+        System.out.println(n);
+        switch (n) {
+            case 1:
+                System.out.println("you have selected Perfume");
+                Perfume c1 = new Perfume(250, "fogg");
+                break;
+            case 2:
+                System.out.println("you have selected  Hand_lotion ");
+                Hand_lotion c2 = new Hand_lotion(250, "fogg");
+                break;
+            case 3:
+                System.out.println("you have selected Razor");
+                Razor c3 = new Razor(250, "fogg");
+                break;
+            case 4:
+                System.out.println("you have selected  Tissues");
+                Tissues c4 = new Tissues(250, "fogg");
+                break;
+            case 5:
+                System.out.println("you have selected  Sunglasses");
+                Sunglasses c5 = new Sunglasses(250, "fogg");
+                break;
+            case 6:
+                System.out.println("you have selected Hand_mirror");
+                Hand_mirror c6 = new Hand_mirror(250, "fogg");
+                break;
+            case 7:
+                System.out.println("you have selected Wet_wipe");
+                Wet_wipe c7 = new Wet_wipe(250, "fogg");
+                break;
+            case 8:
+                System.out.println("you have selected Toothbrush");
+                Toothbrush c8 = new Toothbrush(250, "fogg");
+                break;
+            case 9:
+                System.out.println("you have selected Sunscreen");
+                Sunscreen c9 = new Sunscreen(250, "fogg");
+                break;
+            case 10:
+                System.out.println("you have selected Cotton_swabs");
+                Cotton_swabs c10 = new Cotton_swabs(250, "fogg");
+                break;
+            case 11:
+                System.out.println("you have selected Scissors");
+                Scissors c11 = new Scissors(250, "fogg");
+                break;
+            case 12:
+                System.out.println("you have selected Mouth_wash");
+                Mouth_wash c12 = new Mouth_wash(250, "fogg");
+                break;
+            case 13:
+                System.out.println("you have selected Comb");
+                Comb c13 = new Comb(250, "fogg");
+                break;
+            case 14:
+                System.out.println("you have selected Hair_spray");
+                Hair_spray c14 = new Hair_spray(250, "fogg");
+                break;
+            case 15:
+                System.out.println("you have selected Hair_clip");
+                Hair_clip c15 = new Hair_clip(250, "fogg");
+                break;
+            case 16:
+                System.out.println("you have selected Hairband");
+                Hairband c16 = new Hairband(250, "fogg");
+                break;
+            case 17:
+                System.out.println("you have selected Hairbrush");
+                Hairbrush c17 = new Hairbrush(250, "fogg");
+                break;
+            case 18:
+                System.out.println("you have selected Bobbypin");
+                Bobbypin c18 = new Bobbypin(250, "fogg");
+                break;
+            case 19:
+                System.out.println("you have selected Hairgel");
+                Hairgel c19 = new Hairgel(250, "fogg");
+                break;
+            default:
+                System.out.println("you have selected invalid input");
+                care();
+        }
+    }
+        public void P2()
+        {
+            System.out.println("Price :" + price);
+            System.out.println("Brand :" +brand);
+            buy b=new buy();
+            b.buy();
+
+        }
+}
+class Perfume extends  Personal_care_product
+{
+    Perfume(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+
+    }
+
+
+}
+class Hand_lotion extends  Personal_care_product
+{
+    Hand_lotion(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+
+class Razor extends  Personal_care_product
+{
+    Razor(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Tissues extends  Personal_care_product
+{
+    Tissues(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Sunglasses extends  Personal_care_product
+{
+    Sunglasses(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Hand_mirror extends  Personal_care_product
+{
+    Hand_mirror(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Wet_wipe extends  Personal_care_product
+{
+    Wet_wipe(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Toothbrush extends  Personal_care_product
+{
+    Toothbrush(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Sunscreen extends  Personal_care_product
+{
+    Sunscreen(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Cotton_swabs extends  Personal_care_product
+{
+    Cotton_swabs(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Scissors extends  Personal_care_product
+{
+    Scissors(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Mouth_wash extends  Personal_care_product
+{
+    Mouth_wash(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Comb extends  Personal_care_product
+{
+    Comb(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Hair_spray extends  Personal_care_product
+{
+    Hair_spray(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Hair_clip extends  Personal_care_product
+{
+    Hair_clip(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Hairband extends  Personal_care_product
+{
+    Hairband(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Hairbrush extends  Personal_care_product
+{
+    Hairbrush(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Bobbypin extends  Personal_care_product
+{
+    Bobbypin(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Hairgel extends  Personal_care_product
+{
+    Hairgel(int price,String brand)
+    {
+        this.price=price;
+        this.brand = brand;
+        P2();
+    }
+}
+class Spices_name extends Shop
+
+{
+    int price;
+    String brand;
+    String weight;
+    public void spice() {
+        System.out.println("Press 1 for Cinnamon_Stick ");
+        System.out.println("Press 2 for  Mace ");
+        System.out.println("Press 3 for Saffron");
+        System.out.println("Press 4 for Cumin_seed");
+        System.out.println("Press 5 for Mustard_seed");
+        System.out.println("Press 6 for  Black_Papper");
+        System.out.println("Press 7 for Bay_Leaf");
+        System.out.println("Press 8 for Fenugreek_Seed");
+        System.out.println("Press 9 for Nutmeg");
+        System.out.println("Press 10 for Coriander_Seed");
+        System.out.println("Press 11 for Turmeric_Powder ");
+        System.out.println("Press 12 for  Black_Cardamon ");
+        System.out.println("Press 13 for Carom_Seed");
+        System.out.println("Press 14 for  Charoli");
+        System.out.println("Press 15 for Red_Chilli_Powder");
+        System.out.println("Press 16 for Green_Cardamnon ");
+        System.out.println("Press 17 for  Cloves");
+        System.out.println("Press 18 for  Fennel_Seed");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter any number");
+        int n = sc.nextInt();
+        System.out.println(n);
+        switch (n) {
+            case 1:
+                System.out.println("you have selected Cinnamon_Stick");
+                Cinnamon_Stick n1 = new Cinnamon_Stick(250, "everest","100gm");
+                break;
+            case 2:
+                System.out.println("you have selected   Mace ");
+                Mace n2 = new  Mace(250, "everest","100gm");
+                break;
+            case 3:
+                System.out.println("you have selected Saffron");
+                Saffron n3 = new Saffron(250, "everest","100gm");
+                break;
+            case 4:
+                System.out.println("you have selected  Cumin_seed");
+                Cumin_seed n4 = new Cumin_seed(250, "everest","100gm");
+                break;
+            case 5:
+                System.out.println("you have selected  Mustard_seed");
+                Mustard_seed n5 = new Mustard_seed(250, "everest","100gm");
+                break;
+            case 6:
+                System.out.println("you have selected  Black_Papper");
+                Black_Papper n6 = new   Black_Papper(250,"everest","100gm");
+                break;
+            case 7:
+                System.out.println("you have selected  Bay_Leafr");
+                Bay_Leaf n7 = new Bay_Leaf(250, "everest","100gm");
+                break;
+            case 8:
+                System.out.println("you have selected Fenugreek_Seed");
+                Fenugreek_Seed n8 = new Fenugreek_Seed(250, "everest","100gm");
+                break;
+            case 9:
+                System.out.println("you have selected Nutmeg");
+                Nutmeg n9 = new Nutmeg(250, "everest","100gm");
+                break;
+            case 10:
+                System.out.println("you have selected Coriander_Seed");
+                Coriander_Seed n10 = new Coriander_Seed(250, "everest","100gm");
+                break;
+            case 11:
+                System.out.println("you have selected Turmeric_Powder ");
+                Turmeric_Powder  n11 = new Turmeric_Powder(250, "everest","100gm");
+                break;
+            case 12:
+                System.out.println("you have selected  Black_Cardamon");
+                Black_Cardamon n12 = new  Black_Cardamon(250, "everest","100gm");
+                break;
+            case 13:
+                System.out.println("you have selected Carom_Seed");
+                Carom_Seed n13 = new Carom_Seed(250, "everest","100gm");
+                break;
+            case 14:
+                System.out.println("you have selected  Charoli");
+                Charoli n14 = new  Charoli(250, "everest","100gm");
+                break;
+            case 15:
+                System.out.println("you have selected Red_Chilli_Powder");
+                Red_Chilli_Powder n15 = new Red_Chilli_Powder(250, "everest","100gm");
+                break;
+            case 16:
+                System.out.println("you have selected Green_Cardamnon");
+                Green_Cardamnon n16 = new Green_Cardamnon(250, "everest","100gm");
+                break;
+            case 17:
+                System.out.println("you have selected Cloves");
+                Cloves n17 = new Cloves(250, "everest","100gm");
+                break;
+            case 18:
+                System.out.println("you have selected Fennel_Seed");
+                Fennel_Seed n18 = new Fennel_Seed(250, "everest","100gm");
+                break;
+            default:
+                System.out.println("you have selected invalid input");
+                spice();
+        }
+    }
+    public void P3()
+    {
+        System.out.println("Price :" + price);
+        System.out.println("Brand :" +brand);
+        System.out.println("Weight :" +weight);
+        buy b=new buy();
+        b.buy();
+
+    }
+
+
+}
+class Cinnamon_Stick extends Spices_name
+{
+    Cinnamon_Stick(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Mace extends Spices_name
+{
+    Mace(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Saffron extends Spices_name
+{
+    Saffron(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Cumin_seed extends Spices_name
+{
+    Cumin_seed(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Mustard_seed extends Spices_name
+{
+    Mustard_seed(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Black_Papper extends Spices_name
+{
+    Black_Papper (int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Bay_Leaf extends Spices_name
+{
+    Bay_Leaf(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Fenugreek_Seed extends Spices_name
+{
+    Fenugreek_Seed(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Nutmeg extends Spices_name
+{
+    Nutmeg(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Coriander_Seed extends Spices_name
+{
+    Coriander_Seed(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Turmeric_Powder extends Spices_name
+{
+    Turmeric_Powder(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Black_Cardamon extends Spices_name
+{
+    Black_Cardamon(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Carom_Seed extends Spices_name
+{
+    Carom_Seed(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Charoli extends Spices_name
+{
+    Charoli(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Red_Chilli_Powder extends Spices_name
+{
+    Red_Chilli_Powder(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Green_Cardamnon extends Spices_name
+{
+    Green_Cardamnon(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Cloves extends Spices_name
+{
+    Cloves(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+class Fennel_Seed extends Spices_name
+{
+    Fennel_Seed(int price,String brand,String weight)
+    {
+        this.price=price;
+        this.brand=brand;
+        this.weight=weight;
+        P3();
+    }
+}
+interface  Pay
+{
+    void login();
+}
+
+class login implements Pay
+{
+    String username;
+    String password;
+    private Long Mobile_NO;
+
+
+    public Long getMobile_NO()
+    {
+        return Mobile_NO;
+    }
+
+    public void login()
+    {
+        System.out.println("Login Informations");
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("======================");
+        System.out.println("username : " );
+
+        username =sc.nextLine();
+        System.out.println("----------------------");
+
+        System.out.println("password : " );
+        password=sc.nextLine();
+
+        System.out.println("----------------------");
+        System.out.println("Mobile no :- " );
+        try
+        {
+            long number=sc.nextLong();
+            if(number==1000000000)
+            {
+                System.out.println("--------------------------------------");
+                System.out.println("         Login Successful             ");
+                System.out.println("--------------------------------------");
+            }
+            else
+            {
+                System.out.println("Please enter 10 digit number");
+                login2();
+            }
+        }
+        catch(InputMismatchException in)
+        {
+            System.out.println("Please enter number only");
+            login2();
+        }
+    }
+
+    public void login2()
+    {
+        System.out.println("-----------------------------------");
+		System.out.println("   Confirm Your details"  );
+		System.out.println("-----------------------------------");
+		System.out.println("username :-" + username);
+		System.out.println("password :-" + password);
+		System.out.println("mobile no :-" + Mobile_NO);
+        System.out.println("-----------------------------------");
+        System.out.println("-----------------------------------");
+        System.out.println("Login Successful ");
+        System.out.println("Enjoy the shopping");
+        System.out.println("Enter 1 to shop");
+        System.out.println("Enter 2 to change the details ");
+        System.out.println("-----------------------------------");
+
+Shop c =new Shop();
+       Pay n = new login();
+
+        Scanner s =new Scanner(System.in);
+        String a= s.nextLine();
+
+        switch(a)
+        {
+            case "1": c.product();
+            break;
+            case "2": n.login();
+                break;
+            default : System.out.println("Enter only above option");
+                login2();
+        }
+
+    }
+
+}
+
+class buy
+{
+    public void buy()
+    {
+
+
+        System.out.println("Enter 1 to buy");
+        System.out.println("Enter 2 to go back to Shop ");
+       Shop w= new Shop();
+
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+
+        switch(a) {
+            case "1":
+                System.out.println(" pay for product u want to buy ");
+                payment();
+                break;
+            case "2": System.out.println(" back to Shop");
+                w.product();
+                break;
+            default: System.out.println("Select valid number only");
+                buy();
+        }
+
+
+    }
+
+    public void payment()
+    {
+        System.out.println("    Enter 1 to pay by Cash ");
+        System.out.println("   Enter 2 to pay by UPI ");
+        System.out.println("   Enter 3 back to buy ");
+
+
+        Scanner sc=new Scanner(System.in);
+        String b=sc.next();
+
+        switch (b)
+        {
+            case "1":
+                System.out.println("_______________________________________");
+                System.out.println("Thank you for Shopping with us");
+                break;
+
+            case "2": System.out.println("    You Selected Gpay Option    ");
+                System.out.println("--------------------------------");
+                System.out.println("   Enter the amount of the product   ");
+                Scanner k= new Scanner(System.in);
+                double f= k.nextDouble();
+                System.out.println(" your Amount to Pay is: " + f +"rs" );
+
+                System.out.println("Enter your Upi id");
+                Scanner p= new Scanner(System.in);
+                String upi= p.nextLine();
+                System.out.println("Your UPI: Id Is:" +upi+"ybl");
+                System.out.println("-----------------------------");
+                System.out.println("Enter your UPI pin");
+                Scanner t= new Scanner(System.in);
+                int a1=t.nextInt();
+
+                System.out.println("Your PIn is:" +a1);
+                System.out.println("Your UPI Payment is done successfully");
+                System.out.println("_______________________________________");
+                System.out.println("Thank you for Shopping with us");
+                break;
+            case "3":
+                System.out.println("_______________________________________");
+                buy();
+                break;
+                default: System.out.println("!!!Please enter valid number!!!");
+                payment();
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
